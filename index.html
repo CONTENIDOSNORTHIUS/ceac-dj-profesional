@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0017EC" />
+
+  <!-- SEO -->
+  <title>Curso de Recepcionista de Hotel | CEAC</title>
+  <meta name="description" content="Fórmate como Recepcionista de Hotel con CEAC. Doble titulación CEAC + Nebrija, prácticas garantizadas, bolsa de empleo con Randstad y 510 horas lectivas." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Curso de Recepcionista de Hotel | CEAC" />
+  <meta property="og:description" content="Te formas, trabajas. Curso de Recepcionista de Hotel con doble titulación CEAC + Nebrija y prácticas garantizadas." />
+  <meta property="og:image" content="https://ceac-recepcionista-hotel.vercel.app/assets/img/seccion-3.jpg" />
+  <meta property="og:url" content="https://ceac-recepcionista-hotel.vercel.app" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fuentes: Inter (UI body) + Bianco Serif (display, autohospedada) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/BiancoSerif-Regular.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/BiancoSerif-Italic.ttf" as="font" type="font/ttf" crossorigin />
+
+  <!-- TailwindCSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Paleta corporativa oficial CEAC para web (Pantone 2728 C + Pantone 373 C y sus tintas)
+            ceac: {
+              blue: '#0017EC',     // Pantone 2728 C — azul corporativo
+              blueMid: '#6666F0',  // 2728 C / 60%
+              blueSoft: '#E5E5FA', // 2728 C / 10%
+              lime: '#CDFF4F',     // Pantone 373 C — verde corporativo
+              limeMid: '#E1FF96',  // 373 C / 60%
+              limeSoft: '#F5FFDC', // 373 C / 10%
+              // Aliases legacy — apuntan a la paleta corporativa
+              blueDark: '#6666F0',
+              blueDeep: '#0017EC',
+              limeDark: '#E1FF96',
+              cream: '#F5FFDC',
+              skyBg: '#E5E5FA',
+              softBg: '#F5FFDC',
+            },
+          },
+          fontFamily: {
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Bianco Serif', 'Fraunces', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css?v=20260602" />
+
+  <!-- Trustpilot widget bootstrap (necesario para renderizar la TrustBox) -->
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+</head>
+<body class="font-body text-[#1a1a1a] bg-white antialiased">
+
+  <!-- ==================== NAV (transparente sobre hero, blanco al hacer scroll) ==================== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
+    <nav class="max-w-7xl mx-auto px-4 lg:px-10 h-20 flex items-center justify-between gap-4">
+      <a href="#hero" class="flex items-center" aria-label="CEAC inicio">
+        <img src="assets/logos/ceac-blanco.svg" data-logo-light="assets/logos/ceac-blanco.svg" data-logo-dark="assets/logos/ceac-azul.svg" alt="Logo CEAC" class="h-7 w-auto" id="navLogo" />
+      </a>
+      <ul id="navLinks" class="hidden lg:flex items-center gap-9 text-[14px] text-white font-medium">
+        <li><a href="#quienes-somos" class="hover:opacity-80 transition-opacity">Quienes somos</a></li>
+        <li><a href="#por-que" class="hover:opacity-80 transition-opacity">Por qué hacerlo</a></li>
+        <li><a href="#objetivos" class="hover:opacity-80 transition-opacity">Objetivos</a></li>
+        <li><a href="#temario" class="hover:opacity-80 transition-opacity">Temario</a></li>
+        <li><a href="#metodologia" class="hover:opacity-80 transition-opacity">Metodología</a></li>
+        <li><a href="#equipo" class="hover:opacity-80 transition-opacity">Equipo docente</a></li>
+        <li><a href="#sobre-ceac" class="hover:opacity-80 transition-opacity">Sobre CEAC</a></li>
+      </ul>
+      <button id="menuBtn" class="lg:hidden p-2 rounded text-white" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+      <ul class="px-4 py-3 space-y-2 text-sm">
+        <li><a href="#quienes-somos" class="block py-1">Quiénes somos</a></li>
+        <li><a href="#por-que" class="block py-1">Por qué hacerlo</a></li>
+        <li><a href="#objetivos" class="block py-1">Objetivos</a></li>
+        <li><a href="#temario" class="block py-1">Temario</a></li>
+        <li><a href="#metodologia" class="block py-1">Metodología</a></li>
+        <li><a href="#equipo" class="block py-1">Equipo docente</a></li>
+        <li><a href="#sobre-ceac" class="block py-1">Sobre CEAC</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== 1. HERO (foto a sangre + título serif itálica + pills azules) ==================== -->
+    <section id="hero" class="relative">
+      <div class="relative h-[600px] md:h-[720px] lg:h-[820px] overflow-hidden bg-[#1a1209]">
+        <img src="assets/img/hero-recepcion.png"
+             alt="Recepcionista de hotel atendiendo a clientes en el mostrador"
+             class="absolute inset-0 w-full h-full object-cover"
+             fetchpriority="high" />
+
+        <!-- Degradado para legibilidad del texto en la parte inferior izquierda -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40"></div>
+        <div class="absolute inset-y-0 left-0 w-full md:w-2/3 bg-gradient-to-r from-black/65 to-transparent"></div>
+
+        <!-- Contenido del hero, alineado a la izquierda en el cuadrante inferior -->
+        <div class="absolute inset-0 flex items-end pb-12 md:pb-20 lg:pb-24">
+          <div class="max-w-7xl mx-auto w-full px-4 md:px-10 lg:px-16">
+            <h1 class="font-display text-white text-4xl md:text-6xl lg:text-7xl leading-[1.02] max-w-2xl">
+              Curso de<br/>
+              <span class="italic">Recepcionista de<br/>Hotel</span>
+            </h1>
+
+            <!-- Pills azul CEAC -->
+            <div class="mt-6 md:mt-8 flex flex-wrap items-center gap-3">
+              <span class="bg-ceac-blue text-white text-[13px] font-medium px-5 py-2 rounded-full">
+                Fórmate a tu ritmo
+              </span>
+              <span class="bg-ceac-blue text-white text-[13px] font-medium px-5 py-2 rounded-full">
+                Prácticas garantizadas*
+              </span>
+            </div>
+
+            <!-- Programa avalado por: Instituto Nebrija -->
+            <div class="mt-6 md:mt-8 flex items-center gap-4">
+              <p class="text-white text-[13px] font-medium">Programa avalado por:</p>
+              <img src="assets/logos/instituto-nebrija-blanco.svg" alt="Instituto Nebrija — Competencias Profesionales" class="h-14 md:h-16 w-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. QUIÉNES SOMOS ==================== -->
+    <section id="quienes-somos" class="bg-white pt-10 md:pt-14 pb-4 md:pb-6">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8 bg-ceac-lime rounded-3xl py-14 md:py-16 lg:px-12">
+
+        <!-- Encabezado centrado -->
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-4">
+            Quiénes somos
+          </h2>
+          <p class="text-ceac-blue text-sm md:text-base font-semibold mb-3">
+            Más de 80 años formando a profesionales que transforman su futuro.
+          </p>
+          <p class="text-ceac-blue/85 text-xs md:text-sm leading-relaxed">
+            CEAC es un centro de formación para el empleo con una trayectoria de décadas en las que ha
+            impulsado la carrera profesional de más de tres millones de alumnos.
+          </p>
+        </div>
+
+        <!-- 3 tarjetas blancas con métricas -->
+        <div class="grid grid-cols-3 gap-3 md:gap-5 mt-10 reveal">
+          <article class="bg-white rounded-2xl py-7 md:py-10 px-3 text-center">
+            <p class="font-display text-3xl md:text-5xl lg:text-6xl text-ceac-blue leading-none">+3M</p>
+            <p class="mt-3 text-[10px] md:text-xs text-ceac-blue/80">de alumnos formados</p>
+          </article>
+          <article class="bg-white rounded-2xl py-7 md:py-10 px-3 text-center">
+            <p class="font-display text-3xl md:text-5xl lg:text-6xl text-ceac-blue leading-none">+80</p>
+            <p class="mt-3 text-[10px] md:text-xs text-ceac-blue/80">años de experiencia</p>
+          </article>
+          <article class="bg-white rounded-2xl py-7 md:py-10 px-3 text-center">
+            <p class="font-display text-3xl md:text-5xl lg:text-6xl text-ceac-blue leading-none">+250</p>
+            <p class="mt-3 text-[10px] md:text-xs text-ceac-blue/80">docentes en activo</p>
+          </article>
+        </div>
+
+        <!-- Vídeo "Bienvenido" — facade YouTube: miniatura oficial + botón play que carga el iframe al pulsar -->
+        <div class="mt-6 md:mt-8 reveal">
+          <div id="welcomeVideoWrap" class="relative w-full aspect-video rounded-2xl overflow-hidden bg-gray-300">
+            <button type="button" id="welcomeVideo"
+                    data-yt="55SxchUcmng"
+                    class="group absolute inset-0 w-full h-full focus:outline-none focus:ring-4 focus:ring-ceac-blue/30"
+                    aria-label="Reproducir vídeo de bienvenida de CEAC">
+              <!-- Miniatura oficial de YouTube (con fallback a hqdefault si no hay maxres) -->
+              <img src="https://i.ytimg.com/vi/55SxchUcmng/maxresdefault.jpg"
+                   onerror="this.onerror=null; this.src='https://i.ytimg.com/vi/55SxchUcmng/hqdefault.jpg';"
+                   alt="Miniatura del vídeo de bienvenida"
+                   class="absolute inset-0 w-full h-full object-cover" />
+              <!-- Botón play centrado al estilo YouTube -->
+              <span class="absolute inset-0 flex items-center justify-center">
+                <span class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/95 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="#0017EC" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Agencia de colocación (bloque azul claro) ==================== -->
+    <section class="bg-white pt-2 pb-8 md:pt-3 md:pb-10">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8">
+        <div class="bg-ceac-skyBg rounded-2xl px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 reveal">
+          <div>
+            <p class="font-display text-xl md:text-2xl text-ceac-blue leading-tight">Somos Agencia de Colocación</p>
+            <p class="text-xs md:text-sm text-ceac-blue/80 mt-1">Autorizada nº 1200000120</p>
+          </div>
+          <div class="bg-white rounded-xl px-6 py-3 flex items-center justify-center min-w-[180px]">
+            <img src="assets/logos/sne.png" alt="Sistema Nacional de Empleo" class="h-10 md:h-11 w-auto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Tres institutos ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Encabezado + bullets -->
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-10 reveal">
+          <h2 class="font-display text-3xl md:text-4xl text-ceac-blue leading-tight">
+            Además, contamos con tres institutos de Formación Profesional
+          </h2>
+          <ul class="space-y-4 text-ceac-blue text-sm md:text-base">
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-ceac-limeDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              <span>Más de 17.000m² de innovadoras instalaciones</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-ceac-limeDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              <span>Centros dotados de la última tecnología</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-ceac-limeDark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              <span>Aulas, talleres y laboratorios similares a los de un entorno laboral</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3 tarjetas con marco azul: vídeo arriba + ciudad/dirección abajo (todo dentro del marco) -->
+        <div class="grid grid-cols-3 gap-3 md:gap-4 reveal">
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow p-2 md:p-3">
+            <!-- Vídeo en la parte superior con marco azul alrededor -->
+            <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-ceac-blueDark mb-3 md:mb-4">
+              <video class="instituto-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="auto" aria-label="Vídeo del Instituto CEAC Madrid">
+                <source src="assets/videos/madrid.webm" type="video/webm" />
+              </video>
+            </div>
+            <!-- Texto dentro del marco azul -->
+            <p class="font-display text-2xl md:text-4xl text-white leading-tight">Madrid</p>
+            <p class="text-white/90 text-[11px] md:text-sm mt-1 md:mt-2 leading-snug">Pl. Cronos, nº 1, 28037</p>
+            <p class="text-white/70 text-[9px] md:text-[11px] mt-3 md:mt-4">Cód. centro: 28081169</p>
+          </article>
+
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow p-2 md:p-3">
+            <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-ceac-blueDark mb-3 md:mb-4">
+              <video class="instituto-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="auto" aria-label="Vídeo del Instituto CEAC Barcelona">
+                <source src="assets/videos/barcelona.webm" type="video/webm" />
+              </video>
+            </div>
+            <p class="font-display text-2xl md:text-4xl text-white leading-tight">Barcelona</p>
+            <p class="text-white/90 text-[11px] md:text-sm mt-1 md:mt-2 leading-snug">C. de Salvador Espriu, 38, 08908 L'Hospitalet de Llobregat</p>
+            <p class="text-white/70 text-[9px] md:text-[11px] mt-3 md:mt-4">Cód. centro: 08078282</p>
+          </article>
+
+          <article class="instituto-card bg-ceac-blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow p-2 md:p-3">
+            <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-ceac-blueDark mb-3 md:mb-4">
+              <video class="instituto-video absolute inset-0 w-full h-full object-cover" muted loop playsinline preload="auto" aria-label="Vídeo del Instituto CEAC Valencia">
+                <source src="assets/videos/valencia.webm" type="video/webm" />
+              </video>
+            </div>
+            <p class="font-display text-2xl md:text-4xl text-white leading-tight">Valencia</p>
+            <p class="text-white/90 text-[11px] md:text-sm mt-1 md:mt-2 leading-snug">Avenida de la Ilustración, 4, 46100 Burjassot</p>
+            <p class="text-white/70 text-[9px] md:text-[11px] mt-3 md:mt-4">Cód. centro: 46037650</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Nuestros alumnos opinan ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <h2 class="font-display text-3xl md:text-4xl text-ceac-blue mb-8 reveal">
+          Nuestros alumnos opinan
+        </h2>
+
+        <!-- Widget oficial Trustpilot — Slider (cajitas) -->
+        <div class="reveal">
+          <div class="trustpilot-widget"
+               data-locale="es-ES"
+               data-template-id="54ad5defc6454f065c28af8b"
+               data-businessunit-id="612fa5b235626d001de23f23"
+               data-style-height="240px"
+               data-style-width="100%"
+               data-theme="light"
+               data-stars="4,5"
+               data-review-languages="es">
+            <a href="https://es.trustpilot.com/review/www.ceac.es" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Quienes confían — Sellos de calidad ==================== -->
+    <section class="py-14">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8 reveal">
+        <h2 class="font-display text-3xl md:text-4xl text-ceac-blue leading-tight">Quiénes confían en<br/>nuestra formación</h2>
+        <p class="text-sm md:text-base text-ceac-blue font-semibold mt-2 mb-10">Sellos de calidad</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+          <!-- Sello G (verde corporativo ARDAN) -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 aspect-square flex items-center justify-center">
+            <div class="w-full aspect-square rounded-full bg-[#5C8233] flex items-center justify-center">
+              <img src="assets/sellos/ardan-g.svg" alt="Sello ARDAN G" class="w-3/4 h-3/4" />
+            </div>
+          </div>
+          <!-- Sello GR (rosa) -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 aspect-square flex items-center justify-center">
+            <div class="w-full aspect-square rounded-full bg-[#C2185B] flex items-center justify-center">
+              <img src="assets/sellos/ardan-gr.svg" alt="Sello ARDAN GR" class="w-3/4 h-3/4" />
+            </div>
+          </div>
+          <!-- Sello AR (naranja) -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 aspect-square flex items-center justify-center">
+            <div class="w-full aspect-square rounded-full bg-[#EF6C00] flex items-center justify-center">
+              <img src="assets/sellos/ardan-ar.svg" alt="Sello ARDAN AR" class="w-3/4 h-3/4" />
+            </div>
+          </div>
+          <!-- Sello AP (amarillo) -->
+          <div class="bg-white border border-gray-200 rounded-2xl p-5 aspect-square flex items-center justify-center">
+            <div class="w-full aspect-square rounded-full bg-[#F9A825] flex items-center justify-center">
+              <img src="assets/sellos/ardan-ap.svg" alt="Sello ARDAN AP" class="w-3/4 h-3/4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ¿POR QUÉ ELEGIR? ==================== -->
+    <section id="por-que" class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Título + texto -->
+        <div class="reveal max-w-4xl">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-5 leading-tight">
+            ¿Por qué elegir Recepcionista de Hotel?
+          </h2>
+          <p class="text-gray-700 text-xs md:text-sm leading-relaxed max-w-2xl">
+            La <strong>alta empleabilidad del sector hotelero</strong> lo convierte en un gran atractivo
+            para encontrar trabajo, pero es necesario contar con la formación adecuada. Con miles de
+            profesionales trabajando en hoteles, alojamientos turísticos y complejos vacacionales, esta
+            especialización ofrece una gran oportunidad para acceder al mercado laboral y
+            <strong>crecer profesionalmente en un entorno dinámico e internacional</strong>.
+          </p>
+        </div>
+
+        <!-- Bloque verde único con las 3 estadísticas (alineadas por filas) -->
+        <div class="mt-10 bg-ceac-lime rounded-3xl px-6 py-10 md:py-14 lg:px-12 reveal">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 text-center items-end">
+            <!-- Etiquetas superiores (fila 1) -->
+            <p class="text-xs md:text-sm text-black md:row-start-1">Cada año llegan a nuestro país más de</p>
+            <p class="text-xs md:text-sm text-black md:row-start-1">Un salario medio en España de</p>
+            <p class="text-xs md:text-sm text-black md:row-start-1">En territorio nacional hay más de</p>
+
+            <!-- Cifras grandes (fila 2) -->
+            <p class="font-display text-5xl md:text-6xl lg:text-7xl text-ceac-blue leading-none md:row-start-2">85M</p>
+            <p class="font-display text-5xl md:text-6xl lg:text-7xl text-ceac-blue leading-none md:row-start-2">22.000 €</p>
+            <p class="font-display text-5xl md:text-6xl lg:text-7xl text-ceac-blue leading-none md:row-start-2">15.000</p>
+
+            <!-- Etiquetas inferiores (fila 3) -->
+            <p class="text-xs md:text-sm text-black md:row-start-3">de turistas</p>
+            <p class="text-xs md:text-sm text-black md:row-start-3">anuales</p>
+            <p class="text-xs md:text-sm text-black md:row-start-3">hoteles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LA FORMACIÓN ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8 grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-12 items-start">
+        <div class="reveal">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-5 leading-tight">
+            La formación
+          </h2>
+
+          <p class="text-ceac-blue text-sm md:text-base font-semibold leading-relaxed mb-5">
+            ¡Haz de tu don de gentes una profesión! Con el curso de Recepcionista de Hotel de CEAC
+            te prepararás para trabajar en uno de los sectores con mayor proyección laboral: el
+            turismo y la hostelería.
+          </p>
+
+          <div class="space-y-4 text-gray-700 text-xs md:text-sm leading-relaxed">
+            <p>
+              Aprenderás a gestionar reservas, atender huéspedes, realizar procesos de check-in y
+              check-out y ofrecer una experiencia personalizada a cada cliente desde el primer momento.
+              Además, <strong>dominarás herramientas de gestión hotelera, técnicas de comunicación y
+              habilidades comerciales</strong> para desenvolverte con seguridad en la recepción de
+              cualquier alojamiento.
+            </p>
+            <p>
+              En tu día a día podrás convertirte en la primera imagen del establecimiento, resolviendo
+              incidencias, recomendando actividades y garantizando una atención cercana y profesional
+              tanto a viajeros nacionales como internacionales.
+            </p>
+            <p>
+              <strong>El turismo continúa creciendo año tras año y demanda perfiles especializados</strong>
+              capaces de ofrecer experiencias memorables. Con esta formación podrás acceder a nuevas
+              oportunidades laborales en hoteles, apartamentos turísticos, resorts, cruceros y empresas
+              del sector turístico.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <img src="assets/img/formacion.png"
+               alt="Alumno del curso de Recepcionista de Hotel estudiando con su tablet"
+               class="rounded-2xl shadow-lg w-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SALIDAS PROFESIONALES ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-8 reveal">Salidas profesionales</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 reveal">
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Recepcionista de hotel</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Agente de reservas</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Personal de atención al cliente</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Auxiliar de recepción</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Conserje de apartamentos turísticos</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Personal de agencias de viajes o empresas turísticas</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Guest Service en cruceros</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Personal de front office</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Atención al cliente en alojamientos turísticos</div>
+          <div class="bg-ceac-blue text-white text-sm md:text-base font-medium rounded-xl px-5 py-6 min-h-[5.5rem] flex items-center">Recepcionista en resorts y complejos vacacionales</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DOBLE TITULACIÓN ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Encabezado + descripción -->
+        <div class="reveal max-w-4xl mb-10">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-4 leading-tight">
+            Doble titulación
+          </h2>
+          <p class="text-gray-700 text-xs md:text-sm leading-relaxed">
+            Al terminar tu formación de Recepcionista de Hotel obtendrás dos acreditaciones: el
+            diploma de CEAC y la certificación del Instituto Nebrija de Competencias Profesionales*.
+            Un respaldo que refuerza tu perfil, acredita tus competencias en el sector turístico y te
+            abre oportunidades en distintos tipos de hospedajes e, incluso, te habilita para gestionar
+            tu propio negocio.
+          </p>
+          <p class="text-[10px] md:text-[11px] text-gray-500 italic mt-3">
+            *Enseñanzas que no conducen a la obtención de un título con valor oficial.
+          </p>
+        </div>
+
+        <!-- 2 diplomas lado a lado -->
+        <div class="grid md:grid-cols-2 gap-8 md:gap-10">
+          <article class="reveal">
+            <img src="assets/img/diploma-ceac.png"
+                 alt="Diploma CEAC del curso de Recepcionista de Hotel"
+                 class="w-full rounded-lg shadow-md" />
+            <p class="font-display text-xl md:text-2xl text-ceac-blue mt-5">Título propio CEAC</p>
+            <p class="text-xs md:text-sm text-gray-700 mt-1">
+              Diploma del Curso de Recepcionista de Hotel expedido por CEAC.
+            </p>
+          </article>
+
+          <article class="reveal">
+            <img src="assets/img/diploma-nebrija.png"
+                 alt="Diploma del Instituto Nebrija de Competencias Profesionales"
+                 class="w-full rounded-lg shadow-md" />
+            <p class="font-display text-xl md:text-2xl text-ceac-blue mt-5">Diploma Nebrija</p>
+            <p class="text-xs md:text-sm text-gray-700 mt-1">
+              Aval del Instituto Nebrija de Competencias Profesionales*.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONSIGUE TU CERTIFICACIÓN ==================== -->
+    <section class="py-14">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8">
+        <div class="bg-ceac-skyBg rounded-2xl p-8 lg:p-12 reveal">
+          <h2 class="font-display text-2xl md:text-3xl lg:text-4xl text-ceac-blue mb-5">
+            ¡Consigue tu <span class="italic">certificación!</span>
+          </h2>
+          <p class="text-xs md:text-sm text-gray-800 leading-relaxed mb-4">
+            Nuestros contenidos te preparan para conseguir el certificado profesional
+            <strong>HOT094_3 Recepción</strong>. Puedes hacerte con este reconocimiento a través del
+            proceso de acreditación de competencias que se lleva a cabo en las diferentes Consejerías
+            de Empleo de las comunidades autónomas*. Además, tienes la posibilidad de contratar el
+            <strong>respaldo de la OMAT</strong> para realizar todos los trámites asociados.
+          </p>
+          <p class="text-[10px] md:text-[11px] text-gray-600 leading-relaxed italic mb-8">
+            *Para conocer el detalle si tu CC.AA. participa en el proceso de Acreditación de
+            Competencias, por favor, consulta a nuestros asesores comerciales. La acreditación de
+            competencias podrá variar según las actualizaciones de la legislación y, también, según la
+            comunidad autónoma, puesto que cada una tiene competencias en materia de educación y
+            formación profesional propias. Realizar esta formación no te otorga directamente el
+            certificado profesional, pero te permite iniciar el proceso de acreditación de
+            competencias para poder conseguirlo una vez lo superes. El temario está adaptado al
+            certificado, si bien tendrás que presentarte por cuenta propia y las tasas que sean
+            necesarias para participar en este proceso son ajenas a nosotros, es decir, no están
+            incluidas en el precio del curso y deberás abonarlas a la entidad acreditadora
+            correspondiente.
+          </p>
+          <!-- Logo OMAT (entidad de certificación) -->
+          <img src="assets/logos/omat.png" alt="OMAT — Entidad de Certificación" class="h-16 md:h-20 w-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OBJETIVOS ==================== -->
+    <section id="objetivos" class="py-10 md:py-14 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8 bg-ceac-lime rounded-3xl px-6 md:px-10 lg:px-14 py-10 md:py-14 reveal">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <!-- Texto a la izquierda -->
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-5 leading-tight">
+              <span class="italic">Objetivos</span> de la formación
+            </h2>
+            <p class="text-xs md:text-sm text-black leading-relaxed mb-6">
+              Con esta formación de Recepcionista de Hotel de CEAC aprenderás a desenvolverte en el
+              trabajo real de la recepción hotelera, adquiriendo las habilidades técnicas y
+              comunicativas necesarias para ofrecer una atención profesional y gestionar la experiencia
+              de los huéspedes de principio a fin.
+            </p>
+
+            <ul class="space-y-2 md:space-y-3 text-xs md:text-sm">
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Conocer la operativa y funciones del departamento de recepción.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Gestionar reservas de habitaciones y servicios asociados.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Utilizar herramientas y programas de gestión hotelera.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Desarrollar habilidades comerciales y de fidelización.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Gestionar información sensible conforme a la normativa vigente.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Aplicar normas de protocolo y presentación profesional.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-3.5 h-3.5 mt-1 flex-shrink-0 text-ceac-blue" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg>
+                <span class="text-black">Comprender el funcionamiento del sector turístico y sus estrategias de marketing.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Imagen a la derecha -->
+          <div>
+            <img src="assets/img/objetivos.jpg"
+                 alt="Alumno del curso de Recepcionista de Hotel estudiando con auriculares en biblioteca"
+                 class="rounded-2xl shadow-lg w-full object-cover aspect-[5/6]" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== METODOLOGÍA CEAC ==================== -->
+    <section id="metodologia" class="bg-ceac-skyBg py-12 md:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Encabezado -->
+        <div class="reveal max-w-xl mb-8 md:mb-12">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-3 leading-tight">
+            Metodología <span class="italic">CEAC</span>
+          </h2>
+          <p class="text-ceac-blue font-semibold text-sm md:text-base mb-3">El camino que recorrerás como alumno</p>
+          <p class="text-xs md:text-sm text-black leading-relaxed">
+            Te acompañamos a lo largo de todo el proceso, desde el primer día hasta tu salida al
+            mercado laboral.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración del camino: scroll horizontal -->
+      <div class="reveal relative">
+        <div id="metodologiaScroll" class="metodologia-scroll overflow-x-auto overflow-y-hidden scroll-smooth">
+          <div class="max-w-6xl mx-auto px-4 lg:px-8">
+            <img src="assets/img/metodologia-ceac.png"
+                 alt="Camino del alumno: (01) Formación teórica a tu propio ritmo con asesoramiento continuo; (02) Recursos y campus con material 100% digital, experiencias gamificadas y comunidad; (03) Prácticas garantizadas para llegar al mundo laboral con experiencia; (04) Titulación y empleo con título acreditado y bolsa de empleo; Tu profesión: impulsa tu carrera."
+                 class="block h-auto"
+                 style="min-width: 1000px; width: 100%; max-width: 1400px;" />
+          </div>
+        </div>
+        <div id="metodologiaHint" class="md:hidden text-center mt-3 text-[11px] text-ceac-blue/70 italic">
+          ← desliza para ver el camino completo →
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CAMPUS VIRTUAL ==================== -->
+    <section id="sobre-ceac" class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="max-w-2xl reveal mb-10 md:mb-14">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-3 leading-tight">
+            Campus <span class="italic">virtual</span>
+          </h2>
+          <p class="text-ceac-blue font-semibold text-sm md:text-base mb-4">Todo tu curso, en un único lugar.</p>
+          <p class="text-xs md:text-sm text-black leading-relaxed">
+            Encontrarás todos los recursos de tu formación en un mismo lugar: un campus virtual
+            renovado y en constante actualización que te proporcionará una experiencia de usuario
+            única. Fórmate a través de una plataforma muy intuitiva y visual en la que encontrarás
+            todo tipo de ayudas multimedia para alcanzar tu objetivo.
+          </p>
+        </div>
+        <div class="reveal">
+          <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg bg-ceac-skyBg">
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="https://www.youtube-nocookie.com/embed/OCZC1EqsKuc?rel=0"
+              title="Campus virtual CEAC"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TEMARIO ==================== -->
+    <section id="temario" class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Cabecera: título + botón -->
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4 reveal">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue leading-tight">Descubre nuestro temario</h2>
+          <a href="https://bw.ceac.es/sites/default/files/2026/04/CEAC-temario-curso-recepcionista-hotel.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             download
+             class="inline-flex items-center self-start gap-2 bg-ceac-lime hover:bg-ceac-limeDark text-ceac-blue font-semibold text-xs md:text-sm px-5 py-2.5 rounded-full transition-colors whitespace-nowrap">
+            Descarga nuestro temario gratis
+          </a>
+        </div>
+
+        <!-- Descripción -->
+        <p class="text-xs md:text-sm text-black leading-relaxed max-w-3xl mb-8 reveal">
+          Diferencias entre mercados turísticos, técnicas de marketing, nociones de primeros auxilios,
+          inglés… Esta formación, de <strong>510 horas lectivas</strong>, se ha creado contemplando todos los aspectos
+          profesionales de una recepción de hotel. Aprenderás a trabajar en la gestión del correcto
+          funcionamiento de un hospedaje, a aportar la información de la manera correcta y a tratar con
+          empatía a los clientes. Una vez finalices, estarás preparado para ser el mejor anfitrión que
+          pueden querer los viajeros.
+        </p>
+
+        <!-- Lista de módulos con temario detallado -->
+        <div class="space-y-0" id="accordion">
+
+          <!-- Módulo 1 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 1:</strong> Gestión de reservas de habitaciones y servicios propios de alojamientos</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Gestión de reservas de habitaciones y servicios propios de alojamientos</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Tratamiento y análisis del estado de reservas.</li>
+                  <li>Procedimientos de recepción, aceptación, confirmación, modificación y cancelación de reservas.</li>
+                  <li>Utilización de programas informáticos específicos de reservas.</li>
+                  <li>Emisión de informes o listados. La "rooming list".</li>
+                  <li>Legislación sobre reservas. La figura del "overbooking".</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 2 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 2:</strong> Diseño y ejecución de acciones comerciales en alojamientos</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">El mercado turístico nacional e internacional</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Diferenciación de los elementos componentes de la oferta y la demanda turísticas nacionales e internacionales.</li>
+                  <li>Análisis cuantitativo y cualitativo del sector de la hostelería y el turismo.</li>
+                  <li>Análisis de la estructura de los mercados del turismo y la hostelería. Principales mercados emisores y receptores.</li>
+                  <li>Especialidades del mercado turístico relativo al subsector de alojamiento.</li>
+                  <li>Identificación de las principales fuentes de información turística.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Segmentación y tipología de la demanda turística</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Identificación y clasificación de las necesidades humanas.</li>
+                  <li>Motivaciones primarias secundarias.</li>
+                  <li>Análisis del comportamiento de consumidores o usuarios en servicios de naturaleza turística.</li>
+                  <li>Segmentos y nichos en la demanda turística.</li>
+                  <li>Segmentación y perfiles de la demanda.</li>
+                  <li>Tipología de la demanda en función del tipo de viaje:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>Demanda de viajes organizados o paquetes turísticos.</li>
+                      <li>Demanda de viajes semiorganizados e individuales.</li>
+                    </ul>
+                  </li>
+                  <li>Los destinos turísticos frente a la demanda. Destinos asentados. Destinos emergentes.</li>
+                  <li>Los hechos diferenciales.</li>
+                  <li>Los condicionantes económicos, políticos y sociales:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>El factor precio en los productos turísticos.</li>
+                      <li>Los factores macroeconómicos en las motivaciones turísticas.</li>
+                      <li>Los factores socioculturales y demográficos en la demanda turística.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Aplicación del marketing en hostelería y turismo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Manejo de los conceptos básicos de la economía de mercado.</li>
+                  <li>Determinación de los procedimientos para el estudio de mercados: análisis de las fuentes de información, métodos de investigación y su aplicación en hostelería y turismo.</li>
+                  <li>Verificación de la evolución de hábitos y procedimientos de transacción comercial.</li>
+                  <li>Análisis y argumentación de la evolución del concepto de marketing desde sus inicios. Marketing de servicios.</li>
+                  <li>Diferenciación de las variables o factores básicos propios del mercado y del marketing turístico.</li>
+                  <li>Plan de marketing: elementos que lo constituyen. Fases de elaboración. Elaboración de un plan de comunicación / promoción.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Aplicación del plan de acción comercial</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>CRM: Customer Relationship Management.</li>
+                  <li>Marketing tradicional versus marketing relacional.</li>
+                  <li>Vínculo entre el plan de marketing y el plan de acción comercial:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>Traslado de objetivos de marketing a objetivos comerciales.</li>
+                      <li>Método en cascada.</li>
+                      <li>Acciones comerciales vinculadas con los objetivos de marketing.</li>
+                    </ul>
+                  </li>
+                  <li>La planificación de acciones comerciales.</li>
+                  <li>El plan de ventas: elaboración y control.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Aplicación de las técnicas de venta a las acciones comerciales y reservas en alojamientos</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Contacto inicial: objetivos, importancia de las primeras impresiones, cómo transmitir una imagen profesional.</li>
+                  <li>El sondeo: detección de necesidades, tipos de clientes, motivaciones de compra, enfoques de la venta.</li>
+                  <li>La argumentación: exposición efectiva de productos. Características, beneficios y argumentos en función de las motivaciones del cliente.</li>
+                  <li>Las objeciones: actitudes, tratamiento y técnicas de superación.</li>
+                  <li>El cierre de la operación: detección de oportunidades, tipos de cierres, técnicas según situación y tipología del cliente.</li>
+                  <li>La venta personalizada: atención al cliente, adaptación a sus comportamientos, perfil de la persona de contacto, tratamiento de clientes difíciles.</li>
+                  <li>Aplicación a casos prácticos: ejercicios y simulacros.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Aplicación de la negociación a las acciones comerciales y reservas en alojamientos</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Concepto de negociación. Negociación por principios y por concesiones. Conflictos negociables y no negociables.</li>
+                  <li>Análisis y preparación de la negociación. Información, tiempo y poder.</li>
+                  <li>La rentabilidad de la negociación. Dilema precio-volumen. Consecuencias de los descuentos.</li>
+                  <li>El intercambio de información. La comunicación como herramienta negociadora.</li>
+                  <li>El intercambio de concesiones y contrapartidas. Reglas de oro. Cuadro de alternativas.</li>
+                  <li>El cierre de la negociación. Cómo y cuándo provocarlo. Técnicas de cierre.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 3 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 3:</strong> Comunicación y atención al cliente en hostelería y turismo</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La comunicación aplicada a la hostelería y al turismo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>La comunicación óptima en la atención al cliente:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>Barreras que dificultan la comunicación.</li>
+                      <li>Comunicarse con eficacia en situaciones difíciles.</li>
+                      <li>El lenguaje verbal: palabras y expresiones a utilizar y a evitar.</li>
+                      <li>El lenguaje no verbal: expresión gestual, facial y vocal.</li>
+                      <li>Actitudes ante las situaciones difíciles. Autocontrol. Empatía. Asertividad.</li>
+                      <li>Ejercicios y casos prácticos.</li>
+                    </ul>
+                  </li>
+                  <li>Asociación de técnicas de comunicación con tipos de demanda más habituales.</li>
+                  <li>Resolución de problemas de comunicación.</li>
+                  <li>Análisis de características de la comunicación telefónica y telemática.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Atención al cliente en hostelería y turismo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>La atención personalizada: armonización y reconducción de los clientes.</li>
+                  <li>El tratamiento de situaciones difíciles:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>La nueva perspectiva de las quejas y reclamaciones.</li>
+                      <li>Transformar la insatisfacción en satisfacción.</li>
+                      <li>Tipología de reclamaciones.</li>
+                      <li>Actitud y tratamiento de las reclamaciones.</li>
+                    </ul>
+                  </li>
+                  <li>Tipologías de clientes difíciles y su tratamiento.</li>
+                  <li>La protección de consumidores y usuarios: normativa aplicable en España y la Unión Europea.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 4 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 4:</strong> Organización y prestación del servicio de recepción en alojamientos</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">El departamento de recepción</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Objetivos, funciones y tareas propias del departamento.</li>
+                  <li>Planteamiento de estructura física, organizativa y funcional.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Instalaciones complementarias y auxiliares</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Bar, comedor, cocina, office.</li>
+                  <li>Instalaciones deportivas (piscina, etc.) y jardines.</li>
+                  <li>Instalaciones auxiliares.</li>
+                  <li>Tipos de energía, combustible y otros recursos de los establecimientos turísticos.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Gestión de la información en el departamento de recepción</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Circuitos internos y externos de información. Documentación generada en recepción.</li>
+                  <li>Obtención, archivo y difusión de la información generada.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Prestación de servicios en la recepción</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Descripción de operaciones y procesos durante la estancia: identificación y diseño de documentación, operaciones con moneda extranjera.</li>
+                  <li>Análisis del servicio de noche en la recepción.</li>
+                  <li>Operaciones de registro y entrada (individuales y grupos) y preparación de la llegada.</li>
+                  <li>Uso de aplicaciones informáticas de gestión en recepción.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Facturas y cobro de servicios de alojamiento</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Diferenciación de los medios de pago y sus formas de aplicación.</li>
+                  <li>Análisis de operaciones de facturación y cobro (contado y crédito), manuales e informatizadas.</li>
+                  <li>Cierre diario.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Gestión de la seguridad en establecimientos de alojamiento</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>El servicio de seguridad: equipos e instalaciones.</li>
+                  <li>Procedimientos e instrumentos para la prevención de contingencias.</li>
+                  <li>Normas de protección y prevención de contingencias.</li>
+                  <li>Procedimientos para actuar en emergencia: planes de seguridad y emergencia.</li>
+                  <li>Simulacros de procedimientos en casos de emergencia.</li>
+                  <li>Aplicación de valores éticos en casos de siniestro.</li>
+                  <li>Seguridad de los clientes y sus pertenencias.</li>
+                  <li>Especificidades en entidades no hoteleras: hospitales y clínicas, residencias para la tercera edad, residencias escolares, otros alojamientos no turísticos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 5 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 5:</strong> Gestión de protocolo</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Eventos y protocolo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Concepto de protocolo: origen, clases, utilidad, usos sociales. Protocolo institucional tradicional, empresarial e internacional.</li>
+                  <li>Razones y aplicaciones más habituales del protocolo en diferentes eventos.</li>
+                  <li>Aplicación de las técnicas de protocolo más habituales:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>Precedencias y tratamientos de autoridades.</li>
+                      <li>Colocación de participantes en presidencias y actos.</li>
+                      <li>Ordenación de banderas.</li>
+                    </ul>
+                  </li>
+                  <li>Aplicación de las técnicas más habituales de presentación personal.</li>
+                  <li>El protocolo aplicado a la restauración:
+                    <ul class="list-[circle] pl-5 mt-1 space-y-1 text-gray-600">
+                      <li>Selección de comedor.</li>
+                      <li>Selección de mesas: únicas o múltiples.</li>
+                      <li>Elementos de la mesa.</li>
+                      <li>Servicio personal del plato.</li>
+                      <li>Decoración y presentación de la mesa.</li>
+                      <li>La estética de la mesa.</li>
+                      <li>Colocación protocolaria de presidencias y restantes comensales.</li>
+                      <li>Conducción de comensales hasta la mesa.</li>
+                      <li>Normas protocolarias en el momento del discurso y el brindis.</li>
+                      <li>Normas protocolarias en el vino de honor, cóctel o recepción, buffet, desayuno de trabajo y coffee-break.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 6 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 6:</strong> Función del mando intermedio en la prevención de riesgos laborales</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Fundamentos básicos sobre seguridad y salud en el trabajo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>El trabajo y la salud: riesgos profesionales y su prevención, factores y técnicas preventivas, accidentes y enfermedades profesionales.</li>
+                  <li>Las condiciones de trabajo: seguridad, medio ambiente, organización y carga de trabajo.</li>
+                  <li>Daños derivados del trabajo: accidentes, incidentes, enfermedades profesionales.</li>
+                  <li>Marco normativo básico en prevención: servicios propios, ajenos, mancomunados; asunción personal del empresario; responsabilidades administrativas y penales.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">El papel del mando intermedio en la PRL</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Integración de la PRL en la estructura organizativa.</li>
+                  <li>Funciones, actividades y tareas preventivas específicas del mando intermedio.</li>
+                  <li>Integración de la PRL en la ejecución y supervisión.</li>
+                  <li>Formación del equipo de trabajo en PRL.</li>
+                  <li>Instrumentos del mando intermedio para la PRL.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Técnicas básicas de PRL para mandos intermedios</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Evaluación de riesgos: tipos, proceso general, métodos.</li>
+                  <li>Control y registro: inspecciones, investigación de daños, documentación preventiva, plan de auditoría, propuestas de mejora.</li>
+                  <li>Planes de emergencia: elementos, plan de evacuación, organización en emergencia, normativa.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Tipos de riesgos y medidas preventivas</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Condiciones de seguridad: locales, orden y limpieza, servicios higiénicos, señalización.</li>
+                  <li>Riesgos químicos y eléctricos: manipulación, EPI, almacenamiento, protecciones contra contactos.</li>
+                  <li>Riesgos de incendio y explosión: factores, protección pasiva y activa, detección y extinción, EPI.</li>
+                  <li>Riesgos del medio ambiente de trabajo: térmicos, ruido y vibraciones, EPI.</li>
+                  <li>Riesgos ergonómicos y psicosociales: esfuerzos, posturas, carga mental, turnos y nocturno, estrés, violencia y hostigamiento.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Primeros auxilios</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Intervención básica ante quemaduras, hemorragias, fracturas, heridas e intoxicaciones.</li>
+                  <li>Mantenimiento de botiquines de primeros auxilios.</li>
+                  <li>Intervención y transporte de heridos y enfermos graves.</li>
+                  <li>Técnicas de reanimación cardiopulmonar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 7 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 7:</strong> Procesos de gestión de departamentos del área de alojamiento</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La planificación en empresas y entidades de alojamiento</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>La planificación en el proceso de administración.</li>
+                  <li>Tipos de planes: objetivos, estrategias y políticas. Relación entre ellos.</li>
+                  <li>Pasos lógicos del proceso de planificación.</li>
+                  <li>Revisión periódica de los planes.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Gestión y control presupuestarios</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Gestión presupuestaria: previsión, presupuesto y control.</li>
+                  <li>Concepto y propósito de los presupuestos.</li>
+                  <li>Ciclo presupuestario.</li>
+                  <li>Tipos de presupuestos característicos para áreas de alojamiento.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Estructura financiera</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Identificación y caracterización de fuentes de financiación.</li>
+                  <li>Relación óptima entre recursos propios y ajenos.</li>
+                  <li>Métodos para evaluar inversiones. Aplicaciones informáticas.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Evaluación de costes, productividad y análisis económico</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Estructura de la cuenta de resultados.</li>
+                  <li>Tipos y cálculo de costes.</li>
+                  <li>Determinación, imputación, control y evaluación de consumos. Productividad y umbral de rentabilidad.</li>
+                  <li>Ratios, porcentajes, márgenes de beneficio y rentabilidad.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La organización en los establecimientos de alojamiento</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Normativas sobre autorización y clasificación.</li>
+                  <li>Tipología y clasificación de establecimientos.</li>
+                  <li>Patrones básicos de departamentalización: ventajas e inconvenientes.</li>
+                  <li>Estructuras y relaciones departamentales y externas.</li>
+                  <li>Objetivos y funciones por departamento.</li>
+                  <li>Circuitos de información y documentos interdepartamentales.</li>
+                  <li>Definición de puestos y selección de personal.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La función de integración de personal en pisos y recepción</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Definición y objetivos. Relación con la organización.</li>
+                  <li>Manuales de operaciones de pisos y recepción.</li>
+                  <li>Programas de formación para el personal.</li>
+                  <li>Técnicas de comunicación y motivación.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La dirección de personal en el área de alojamiento</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Comunicación en las organizaciones.</li>
+                  <li>Negociación en el entorno laboral.</li>
+                  <li>Solución de problemas y toma de decisiones.</li>
+                  <li>Liderazgo en las organizaciones.</li>
+                  <li>Dirección y dinamización de equipos y reuniones.</li>
+                  <li>Motivación en el entorno laboral.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Aplicaciones informáticas específicas</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Tipos y comparación.</li>
+                  <li>Programas a medida y oferta estándar.</li>
+                  <li>Utilización práctica.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 8 -->
+          <div class="border-t border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 8:</strong> Procesos de gestión de calidad en hostelería y turismo</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La cultura de la calidad en hostelería y turismo</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Concepto de calidad y excelencia en el servicio: aseguramiento, coste, productividad, gestión del rendimiento, herramientas, sistemas de calidad, modelo EFQM.</li>
+                  <li>Aspectos legales y normativos: legislación nacional e internacional. Normalización, acreditación y certificación.</li>
+                  <li>El plan de turismo español Horizonte 2020.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">La gestión de la calidad en la organización</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Organización de la calidad: enfoque de los sistemas de gestión, compromiso de la dirección, coordinación, evaluación.</li>
+                  <li>Gestión por procesos: identificación, planificación, medida y mejora de procesos.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Procesos de control de calidad de los servicios y productos</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Procesos de producción y servicio. Comprobación de la calidad.</li>
+                  <li>Supervisión y medida del proceso y producto/servicio. Satisfacción del cliente.</li>
+                  <li>Gestión de los datos: objetivos, informes, calidad asistida por ordenador, métodos estadísticos.</li>
+                  <li>Evaluación de resultados.</li>
+                  <li>Propuestas de mejora.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo 9 -->
+          <div class="border-t border-b border-gray-200">
+            <button class="acc-btn w-full flex justify-between items-center py-4 text-left hover:bg-gray-50 transition-colors px-2 gap-4" aria-expanded="false">
+              <span class="text-ceac-blue text-sm md:text-base"><strong>Módulo 9:</strong> English for Hotel Receptionists</span>
+              <span class="acc-icon flex-shrink-0 w-9 h-9 rounded-full bg-ceac-lime text-ceac-blue flex items-center justify-center transition-transform">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+              </span>
+            </button>
+            <div class="acc-panel hidden pb-6 px-2 text-xs md:text-sm text-gray-700 space-y-4" lang="en">
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Basic communication in English in the hotel environment</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Common expressions and greetings.</li>
+                  <li>Personal and professional introductions.</li>
+                  <li>Nationalities, personal details and spelling.</li>
+                  <li>Functional use of "to be", "have got", "there is/are".</li>
+                  <li>Understanding short oral messages related to the hotel environment.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Customer service at reception</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Basic check-in: common questions and answers.</li>
+                  <li>Asking for and confirming guests' details.</li>
+                  <li>Providing information about hotel services (service hours, facilities, rules).</li>
+                  <li>Polite expressions and professional customer service.</li>
+                  <li>Handling simple situations: room changes, requested amenities, wake-up calls.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Reservation management in English (A2)</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Basic vocabulary related to reservations: dates, room types, board, prices.</li>
+                  <li>Confirming, changing and cancelling reservations.</li>
+                  <li>Information about availability.</li>
+                  <li>Simple emails about reservations.</li>
+                  <li>Basic use of reservation systems in English (functional introduction).</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Solving simple issues</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Understanding common complaints in English (noise, cleaning, Wi-Fi, etc.).</li>
+                  <li>Common responses and basic solutions.</li>
+                  <li>Referring to the appropriate department.</li>
+                  <li>Expressions for apologizing and maintaining a professional tone.</li>
+                  <li>Brief follow-up on guest issues.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Tourist information and customer guidance</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Describing places, timetables and prices.</li>
+                  <li>Giving simple directions.</li>
+                  <li>Making recommendations about transport, restaurants and activities.</li>
+                  <li>Basic description of hotel facilities.</li>
+                  <li>Interaction with international tourists (pronunciation and clarity).</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Telephone and online communication in English</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Telephone customer service expressions.</li>
+                  <li>Identifying the caller and the reason for the call.</li>
+                  <li>Taking simple requests.</li>
+                  <li>Transferring calls.</li>
+                  <li>Managing calls in busy situations.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Professional written communication (A2)</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Simple emails: structure and appropriate vocabulary.</li>
+                  <li>Internal brief messages (shift notes, handover notes).</li>
+                  <li>Simple notices for guests (service hours, rules, reminders).</li>
+                  <li>Appropriate use of polite written expressions.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Basic billing tasks in English</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Essential vocabulary: bill, charge, payment methods.</li>
+                  <li>Explaining charges and resolving basic doubts.</li>
+                  <li>Requesting and verifying payments.</li>
+                  <li>Issuing bills and completing the check-out process.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Security and special situations</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Key vocabulary and expressions for emergencies.</li>
+                  <li>Communicating simple instructions in case of incidents.</li>
+                  <li>Basic security procedures for guests.</li>
+                  <li>Managing lost and found.</li>
+                </ul>
+              </div>
+              <div>
+                <p class="font-semibold text-ceac-blue mb-2">Communicative practices and simulations</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Check-in and check-out roleplays.</li>
+                  <li>Telephone reservation simulations.</li>
+                  <li>Complaint handling and problem-solving practice.</li>
+                  <li>Tourist information and recommendations.</li>
+                  <li>Full simulation of a reception shift.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EQUIPO DOCENTE ==================== -->
+    <section id="equipo" class="py-16 lg:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <!-- Título centrado: "Descubre a nuestro" regular + "equipo docente" italic -->
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue mb-10 md:mb-14 reveal text-center leading-tight">
+          Descubre a nuestro<br/>
+          <span class="italic">equipo docente</span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+          <!-- Cora Rilo -->
+          <article class="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 flex gap-4 md:gap-5 reveal">
+            <img src="assets/img/cora-rilo.png" alt="Cora Rilo" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover flex-shrink-0" />
+            <div>
+              <h3 class="font-display text-lg md:text-xl text-ceac-blue mb-2">Cora Rilo</h3>
+              <p class="text-[11px] md:text-xs text-gray-700 leading-relaxed">
+                Diplomada en Turismo y Licenciada en Traducción e Interpretación. Además, Rilo es
+                Técnico Superior en Desarrollo de Aplicaciones Web. En su currículum también destacan
+                un Máster de Profesorado y un Certificado de Profesionalidad de Habilitación Docente.
+                Igualmente cuenta con conocimientos en materia de igualdad de género, orientación
+                laboral, recursos humanos y facturación electrónica.
+              </p>
+            </div>
+          </article>
+
+          <!-- Cristina Bacci -->
+          <article class="bg-white rounded-2xl border border-gray-200 p-5 md:p-6 flex gap-4 md:gap-5 reveal">
+            <img src="assets/img/cristina-bacci.webp" alt="Cristina Bacci" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover flex-shrink-0" />
+            <div>
+              <h3 class="font-display text-lg md:text-xl text-ceac-blue mb-2">Cristina Bacci</h3>
+              <p class="text-[11px] md:text-xs text-gray-700 leading-relaxed">
+                Licenciada en Filología Inglesa por la Universidad Autónoma de Madrid. Máster en
+                Escritura Creativa por la UNIR. Programa de Escritura, Estilo y Creatividad por la
+                VIU. Más de 15 años dedicada a la enseñanza del inglés en todos los niveles y edades.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== APRENDE TRABAJANDO ==================== -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div class="reveal">
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ceac-blue leading-[1.1] mb-4">
+            Prácticas garantizadas:<br/><span class="italic">aprende trabajando</span>
+          </h2>
+          <p class="font-display text-xl md:text-2xl lg:text-3xl text-ceac-blue leading-tight mb-7">
+            Vive la experiencia del<br/>sector turístico.
+          </p>
+          <div class="space-y-4 text-xs md:text-sm text-black leading-relaxed">
+            <p>
+              Además de la formación teórica, podrás <strong>realizar prácticas profesionales en
+              empresas colaboradoras</strong> para conocer el funcionamiento real de la recepción de un
+              hotel y adquirir experiencia en atención al cliente, gestión de reservas y operativa
+              hotelera.
+            </p>
+            <p>
+              Tendrás la oportunidad de desenvolverte en un entorno profesional y aplicar todo lo
+              aprendido durante el curso en hoteles, alojamientos turísticos y establecimientos del
+              sector.
+            </p>
+            <p>
+              Trabajamos con empresas y colaboradores vinculados al ámbito turístico y hotelero para
+              acercarte al mercado laboral desde el primer día.
+            </p>
+          </div>
+        </div>
+        <div class="reveal">
+          <img src="assets/img/aprende-trabajando.png"
+               alt="Profesional del sector turístico durante una práctica profesional"
+               class="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== RED DE EMPRESAS ==================== -->
+    <section class="py-12 lg:py-16">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8">
+        <div class="text-center reveal max-w-3xl mx-auto">
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-ceac-blue mb-2">
+            Red de empresas
+          </h2>
+          <p class="text-ceac-blue font-semibold text-sm md:text-base mb-5">
+            Algunas de las empresas con convenio de prácticas
+          </p>
+          <p class="text-[11px] md:text-xs text-black leading-relaxed max-w-xl mx-auto mb-8">
+            Colaboramos con hoteles, alojamientos turísticos y empresas del sector hospitality en
+            toda España para acercarte a la realidad profesional y ayudarte a dar tus primeros pasos
+            en el mercado laboral.
+          </p>
+        </div>
+
+        <!-- Carrusel horizontal de logos colaboradores con flechas -->
+        <div class="relative reveal">
+          <!-- Botón izquierda -->
+          <button type="button" id="logosPrev" aria-label="Logos anteriores"
+                  class="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0017EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <!-- Botón derecha -->
+          <button type="button" id="logosNext" aria-label="Logos siguientes"
+                  class="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 items-center justify-center transition">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0017EC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div id="logosTrack" class="logos-track-scroll flex gap-3 md:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-2">
+            <div class="logo-card snap-start"><img src="assets/logos/sercotel.png" alt="Sercotel Hotels" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/ilunion.png" alt="Ilunion Hotels" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/mamarosa.png" alt="Mamarosa Beach" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/golden.png" alt="Hotel Golden" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/quinta-san-amaro.png" alt="Quinta de San Amaro Hotel y Restaurante" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/altafullamar.png" alt="Altafulla Mar Hotel" /></div>
+            <div class="logo-card snap-start"><img src="assets/logos/ibis.png" alt="ibis" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOLSA DE EMPLEO RANDSTAD ==================== -->
+    <section class="py-12 lg:py-16">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8">
+        <h2 class="font-display text-2xl md:text-3xl lg:text-4xl text-ceac-blue text-center mb-8 reveal">
+          Bolsa de empleo con Randstad
+        </h2>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+          <p class="text-xs md:text-sm text-black leading-relaxed max-w-xl">
+            Accede a oportunidades laborales gracias a nuestro acuerdo con Randstad, empresa líder
+            mundial en recursos humanos y selección de talento.
+          </p>
+          <img src="assets/logos/randstad.png" alt="Logo Randstad" class="h-16 md:h-24 w-auto flex-shrink-0" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== CTA FINAL "Te formas, trabajas" ==================== -->
+    <section class="py-20 lg:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 lg:px-8">
+        <div class="text-center reveal">
+          <p class="font-display text-ceac-blue text-5xl md:text-7xl lg:text-8xl leading-tight">
+            Te formas, <span class="italic">trabajas</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-ceac-blue text-white py-12">
+    <div class="max-w-6xl mx-auto px-4 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div class="md:col-span-1">
+          <img src="assets/logos/ceac-blanco.svg" alt="Logo CEAC" class="h-7 w-auto mb-3" />
+          <p class="text-[11px] text-white/60 italic mb-3">*Consultar condiciones</p>
+          <p class="text-xs text-white/70 leading-relaxed">
+            Más de 80 años formando a profesionales en España.<br/>
+            Agencia de Colocación Autorizada nº 1200000120.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold mb-3 text-white text-sm">Legal</p>
+          <ul class="space-y-2 text-xs text-white/70">
+            <li><a href="https://www.ceac.es/aviso-legal" target="_blank" rel="noopener noreferrer" class="hover:text-ceac-lime transition-colors">Aviso legal</a></li>
+            <li><a href="https://www.ceac.es/politica-de-privacidad" target="_blank" rel="noopener noreferrer" class="hover:text-ceac-lime transition-colors">Política de privacidad</a></li>
+            <li><a href="https://cat-formacion.ceac.es/politica-cookies/" target="_blank" rel="noopener noreferrer" class="hover:text-ceac-lime transition-colors">Política de cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold mb-3 text-white text-sm">Contacto</p>
+          <ul class="space-y-2 text-xs text-white/70">
+            <li><a href="tel:+34912174598" class="hover:text-ceac-lime transition-colors">912 174 598</a></li>
+            <li><a href="mailto:info@ceac.com" class="hover:text-ceac-lime transition-colors">info@ceac.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/15 pt-5 text-xs text-white/50 text-center">
+        ©2026. CEAC Cursos. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20260602b"></script>
+</body>
+</html>
