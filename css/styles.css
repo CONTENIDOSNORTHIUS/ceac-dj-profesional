@@ -48,12 +48,12 @@ html {
   box-sizing: border-box;
 }
 .logo-card img {
-  max-width: 100%;
-  max-height: 70px;
   width: auto;
-  height: auto;
+  height: 60px;
+  max-width: 140px;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .logo-card {
@@ -61,7 +61,7 @@ html {
     height: 130px;
     padding: 1rem 1.25rem;
   }
-  .logo-card img { max-height: 85px; }
+  .logo-card img { height: 75px; max-width: 170px; }
 }
 
 /* Pista del camino de la metodología — scrollbar fina y discreta en lavanda */
