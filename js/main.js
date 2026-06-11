@@ -185,6 +185,24 @@
     }, { passive: true });
   }
 
+  /* ---------- 8. Vídeos yt-facade genéricos (Luis Romo) ---------- */
+  document.querySelectorAll('.yt-facade').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.yt;
+      if (!id) return;
+      const wrap = btn.parentElement;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = btn.getAttribute('aria-label') || 'Vídeo CEAC';
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.className = 'absolute inset-0 w-full h-full border-0';
+      wrap.innerHTML = '';
+      wrap.appendChild(iframe);
+    });
+  });
+
   /* ---------- 6. Nav: transparente sobre hero → blanco al hacer scroll ---------- */
   const nav = document.getElementById('nav');
   const navLogo = document.getElementById('navLogo');
